@@ -245,7 +245,6 @@ a.deactivated{
   .hero-text-right{
     display: inline-block;
     text-align: center;
-    padding-left: 32px;
     position: relative;
     left: 50%;
     top: 50%;
@@ -286,14 +285,6 @@ a.deactivated{
   .hero-text-left{
     display: none;
   }
-}
-
-.home-section{
-  min-height: 200px;
-}
-
-.home-section:last-of-type{
-  padding-bottom: 512px;
 }
 
 .section-inner{
@@ -504,6 +495,7 @@ p.side-note{
   background-image: url("about/header-image.jpg");
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
   color: #fff;
 }
 
@@ -651,14 +643,21 @@ p.about-body-quote{
   width: 100%;
   min-height: 800px;
   height: 80vh;
-  background-position: center center;
+  background-position: center 200%;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.project-hero-sub{
+  background-position: center center;
 }
 
 @media (max-width: 1000px){
   .project-hero{
     height: 50vh;
     min-height: 0;
+    background-position: center center;
+    background-attachment: unset;
   }
 }
 
