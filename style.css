@@ -298,6 +298,10 @@ a.deactivated{
   margin: 32px 0;
 }
 
+p.side-note{
+  opacity: 0.4;
+}
+
 .home-about-section img{
   width: 400px;
   position: relative;
@@ -568,6 +572,7 @@ p.about-body-quote{
 /* PROJECT HERO */
 
 .project-hero{
+  position: relative;
   width: 100%;
   min-height: 800px;
   height: 80vh;
@@ -584,7 +589,11 @@ p.about-body-quote{
 }
 
 #fallen-hero{
-  background-image: url("fallen-short-film/screen-2.jpg");
+  background-image: url("fallen-short-film/screen-3.jpg");
+}
+
+#fallen-bts-hero{
+  background-image: url("fallen-short-film/bts-1.jpg");
 }
 
 #chairmans-hero{
@@ -734,36 +743,73 @@ p.about-body-quote{
   font-size: 16px;
 }
 
-ul.contents{
-  width: 300px;
-  margin: 32px auto;
-  padding: 32px 64px;
-  border: 1px dashed #666;
+.fallen-bts-title{
+  display: inline-block;
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 128px;
+  letter-spacing: 4px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.fallen-fixed-contents{
+  position: fixed;
+  top: 50%;
+  left: 56px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+  opacity: 0;
+  z-index: -1000;
+}
+
+.fallen-fixed-contents ol, .fallen-fixed-contents ul{
+  margin: 0;
+  padding: 0;
+}
+
+.fallen-fixed-contents ul{
   list-style: none;
-  text-align: center;
+  margin-left: -16px;
 }
 
-.contents li{
-  padding: 16px 0;
+.fallen-fixed-contents-title{
+  padding: 8px 0;
+  margin-left: -16px;
+  font-family: 'Oswald';
 }
 
-.contents li:hover{
-  background-color: #f6f6f6;
+.fallen-fixed-contents li{
+  padding: 8px 0;
+  opacity: 0.2;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  font-family: 'Oswald';
+}
+
+.fallen-fixed-contents li:hover{
+  color: #222;
+  opacity: 1.0;
+  transition: all 0.2s ease;
 }
 
 /* CALENDAR */
 
-.calendar{
+.calendar-outer{
   display: inline-block;
-  position: absolute;
-  left: -360px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 32px 0;
 }
 
-.calendar h3{
-  text-align: center;
+.calendar, .calendar-key{
+  display: inline-block;
 }
 
-.calendar table{
+.calendar{
   border-collapse: collapse;
   box-shadow: 0 0 8px 1px rgba(0,0,0,0.1);
   padding: 4px;
@@ -780,7 +826,7 @@ ul.contents{
   position: relative;
 }
 
-.day-start, .day-idea, .day-pre, .day-strbd, .day-prod, .day-post, .day-end, .day-remaster{
+.day-start, .day-idea, .day-pre, .day-strbd, .day-prod, .day-post, .day-end{
   color: #fff;
 }
 
@@ -838,17 +884,14 @@ ul.contents{
   background-color: #F58155;
 }
 
-.day-remaster{
-  background-image: url("fallen-short-film/striped-back.png");
-  background-size: 100%;
-}
-
 .row-weekdays{
   background-color: #f6f6f6;
 }
 
 .calendar-key{
-  margin-top: 32px;
+  position: relative;
+  top: -24px;
+  margin-left: 32px;
 }
 
 .calendar-key-item{
@@ -930,6 +973,7 @@ ul.contents{
   width: 100%;
   height: 200px;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 24px 0;
 }
 
