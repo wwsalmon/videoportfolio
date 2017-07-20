@@ -641,7 +641,6 @@ p.about-body-quote{
 .project-hero{
   position: relative;
   width: 100%;
-  min-height: 800px;
   height: 80vh;
   background-position: center 200%;
   background-size: cover;
